@@ -18,7 +18,6 @@ abstract class BaseViewModel : ViewModel() {
             try {
                 val response = request.invoke()
                 if (response.data != null) {
-                    // Сетим в лайвдату командой postValue в IO потоке
                     liveData.postValue(Event.success(response.data))
                 } else if (response.error != null) {
                     liveData.postValue(Event.error(response.error))

@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import javax.inject.Inject
 
 class RecyclerAdapter(private val nameList: MutableList<String>, private val status: String): RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 

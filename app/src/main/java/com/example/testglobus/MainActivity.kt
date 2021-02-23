@@ -1,9 +1,7 @@
 package com.example.testglobus
 
 import android.os.Bundle
-import android.widget.Adapter
 import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -30,11 +28,8 @@ class MainActivity : AppCompatActivity() {
         activityViewModel = ViewModelProviders.of(this).get(ActivityViewModel::class.java)
         observeGetPosts()
         buttonsClickListener()
-
     }
 
-    // Наблюдаем за нашей лайвдатой
-    // В зависимости от Ивента устанавливаем нужное состояние вью
     private fun observeGetPosts() {
         activityViewModel.simpleLiveData.observe(this, Observer {
             when (it.status) {
@@ -77,6 +72,5 @@ class MainActivity : AppCompatActivity() {
 
     private fun viewOneError(error: Error?) {
         Toast.makeText(this,"Error", Toast.LENGTH_SHORT).show()
-        // Показываем ошибку
     }
 }
