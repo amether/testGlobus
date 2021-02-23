@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">testGlobus</string>
+    <string name="text_label">PETS STATUS</string>
+    <string name="btn_available">Available</string>
+    <string name="btn_pending">Pending</string>
+    <string name="btn_sold">Sold</string>
+</resources>
